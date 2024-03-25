@@ -2,10 +2,7 @@ package hei.school.soratra.endpoint;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class SoratraController {
@@ -19,4 +16,18 @@ public class SoratraController {
     }
     return ResponseEntity.ok().contentType(MediaType.TEXT_PLAIN).body("OK");
   }
+    /*
+  @GetMapping(value = "/soratra/{id}")
+    public ResponseEntity<String> getSoratraById(@PathVariable(name = "id") String id) {
+      String returned = soratraService.getSoratraById(id);
+      if (returned == null) {
+          RestSoratra restSoratra = new RestSOratra();
+          restSoratra.setOriginal_url("https://original.url");
+          restSoratra.setTransformed_url("https://transformed.url");
+          return restSoratra;
+      }
+  }
+  */
+
+
 }
